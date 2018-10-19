@@ -1,0 +1,99 @@
+@import url('font-awesome.min.css');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: block;
+    background: #2B2B2E;
+}
+
+.nav{
+    display: block;
+    position: absolute;
+    left: 48%;
+    top: 250px;
+}
+
+.nav button{
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid #757F89;
+    border-radius: 100%;
+    background: #37373A;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.75em;
+    z-index: 2;
+    color: #757F89;
+    -webkit-transition: all 250ms ease forwards;
+    -ms-transition: all 250ms ease forwards;
+    -o-transition: all 250ms ease forwards;
+    transition: all 250ms ease forwards;
+}
+
+.nav button.open{
+    animation: open 250ms ease forwards;
+}
+
+@keyframes open{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(135deg)
+    }
+}
+
+.nav button.close{
+    animation: close 250ms ease forwards;
+}
+
+@keyframes close{
+    0%{
+        transform: rotate(135deg)
+    }
+    100%{
+        transform: rotate(0deg)
+    }
+}
+
+.nav ul li{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #757F89;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 3;
+    cursor: pointer;
+    background: #37373A;
+    opacity: 0;
+    -webkit-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: #757F89;
+}
+
+
+.nav ul li:hover, .nav button:hover{
+    background: #1f1f21;
+    border: 1px solid #1f1f21;
+}
