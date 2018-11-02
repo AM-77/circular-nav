@@ -51,7 +51,11 @@ let distance = 120
 let link_list = document.querySelector("ul.link_list")
 links.forEach(link => {
     // Fill the ul nav element with the li links
-    link_list.innerHTML += "<li class='round_link "+link.class+"' id='"+link.id+"'><a class='"+link.class+"' id='"+link.id+"' href='"+link.href+"' title='"+link.title+"' alt='"+link.alt+"' >"+link.value+"</a></li>"
+    link_list.innerHTML += `
+        <li class='round_link ${ link.class }' id=' ${ link.id }'>
+            <a class='${ link.class }' id='${ link.id }' href='${ link.href }' title='${ link.title }' alt='${ link.alt }' > ${ link.value }</a>
+        </li>
+    `
 })
 
 let lis = document.querySelectorAll("ul li.round_link")
