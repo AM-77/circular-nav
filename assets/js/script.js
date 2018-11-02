@@ -85,7 +85,7 @@ nav_button.addEventListener("click", ()=>{
             let transY = (Math.sin(( radian )*i) * distance)
 
             //Use transX or -transX  && transY or -transY to change the position of nav lis
-            lis[i].style.transform = "translateX("+ transX +"px) translateY("+ -transY +"px)"  
+            lis[i].style.transform = `translateX( ${ transX }px) translateY( ${ -transY }px)`
             lis[i].style.opacity = "1" 
 
         }
